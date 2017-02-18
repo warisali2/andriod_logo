@@ -10,16 +10,21 @@ div div {
   position: relative;
 }
 
-.android {
+a {
+  outline: none;
+}
+
+#android {
   height: 404px;
-  width: 334px;
+  width: 350px;
   margin: 100px auto;
 }
 
-.head {
+#head {
   width: 220px;
   height: 100px;
   top: 32px;
+  left: 65px;
 
   border-radius: 101px 101px 0 0;
   -moz-border-radius: 101px 101px 0 0;
@@ -28,7 +33,7 @@ div div {
   -webkit-transition: all 0.1s ease-in;
 }
 
-.l_eye, .r_eye {
+#l_eye, #r_eye {
   width: 20px; height: 20px;
   background: #fff;
 
@@ -40,15 +45,15 @@ div div {
   -webkit-border-radius: 10px;
 }
 
-.l_eye {
+#l_eye {
   left: 50px;
 }
 
-.r_eye {
+#r_eye {
   right: 50px;
 }
 
-.l_ant, .r_ant {
+#l_ant, #r_ant {
   width: 6px; height: 50px;
   position: absolute;
   top: -34px;
@@ -58,31 +63,32 @@ div div {
   -webkit-border-radius: 3px;
 }
 
-.l_ant {
+#l_ant {
   left: 50px;
   transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -webkit-transform: rotate(-30deg);
 }
 
-.r_ant {
+#r_ant {
   right: 50px;
   transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -webkit-transform: rotate(30deg);
 }
 
-.body {
+#body {
   top: 40px;
   width: 220px;
   height: 184px;
+  left: 65px;
 
   border-radius: 0 0 25px 25px;
   -moz-border-radius: 0 0 25px 25px;
   -webkit-border-radius: 0 0 25px 25px;
 }
 
-.upper_arm, .lower_arm {
+#upper_arm, #lower_arm {
   width: 50px;
   position: absolute;
 
@@ -90,20 +96,22 @@ div div {
   border-radius: 25px;
   -moz-border-radius: 25px;
   -webkit-border-radous: 25px;
+
+  -webkit-transition: all 0.3s ease-in;
 }
 
-.lower_arm {
+#lower_arm {
   transform: translate(0, 50px);
 }
 
-.l_arm, .r_arm, .l_leg, .r_leg {
+#l_arm, #r_arm, #l_leg, #r_leg {
   width: 50px;
   position: absolute;
 
-  -webkit-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.3s linear;
 }
 
-.l_arm, .r_arm {
+#l_arm, #r_arm {
   height: 150px;
 
   border-radius: 25px
@@ -111,7 +119,10 @@ div div {
   -webkit-border-radius: 25px;
 }
 
-.l_leg, .r_leg {
+#l_arm {
+  background: transparent;
+}
+#l_leg, #r_leg {
   height: 80px;
   top: 182px;
 
@@ -120,39 +131,39 @@ div div {
   -webkit-border-radius: 0 0 25px 25px;
 }
 
-.l_arm {
+#l_arm {
   left: -58px;
 }
 
-.r_arm {
+#r_arm {
   right:-58px;
 }
 
-.l_leg {
+#l_leg {
   left: 45px;
 }
-.r_leg {
+#r_leg {
   right: 45px;
 }
 
-.head:hover {
+#head:hover {
   transform: rotate(-5deg) translate(-4px, -8px);
   -moz-transform: rotate(-5deg) translate(-4px, -8px);
   -webkit-transform: rotate(-5deg) translate(-4px, -8px);
 }
 
-.l_arm:hover{
+#l_arm:hover{
 	-webkit-transform: rotate(15deg) translate(-14px, 0);
 	-transform: rotate(15deg) translate(-14px, 0);
 	-moz-transform: rotate(15deg) translate(-14px, 0);
 }
-.r_arm:hover{
+#r_arm:hover{
 	-webkit-transform: rotate(-30deg) translate(30px, 0);
 	-transform: rotate(-30deg) translate(30px, 0);
 	-moz-transform: rotate(-30deg) translate(30px, 0);
 }
 
-.belt {
+#belt {
   width: 220px;
   height: 20px;
   position: relative;
@@ -161,11 +172,10 @@ div div {
 
   box-shadow: 0 1px 2px rgba(0,0,0,0.24);
 }
-a {
-  outline: none;
-}
-.buckel {
+
+#buckle {
   position: relative;
+  z-index: 100;
 
   top: 85px;
   left: 85px;
@@ -193,20 +203,19 @@ a {
 
 }
 
-.buckel:active {
+#buckle:active {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: red;
 }
 
 @keyframes laugh {
-
-  from {
+  0% {
     transform: rotate(0) translate(0, 0);
     -moz-transform: rotate(0) translate(0, 0);
     -webkit-transform: rotate(0) translate(0, 0);
   }
 
-  to {
+  100% {
     transform: rotate(-5deg) translate(-4px, -8px);
     -moz-transform: rotate(-5deg) translate(-4px, -8px);
     -webkit-transform: rotate(-5deg) translate(-4px, -8px);
