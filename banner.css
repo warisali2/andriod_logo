@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+#banner {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 24px;
+
+  text-align: center;
+  background-color: #2C3E50;
+  color: #ECF0F1;
+
+  height: 46px;
+  width: 400px;
+
+  line-height: 46px;
+  white-space: nowrap;
+
+  border: 6px solid #2980B9;
+
+
+  padding: 0 20px;
+  margin: 20px auto;
+
+  display: block;
+}
