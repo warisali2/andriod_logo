@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+body {
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+}
 div {
   margin: 0; padding: 0;
   widht: 100%;

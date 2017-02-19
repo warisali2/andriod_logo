@@ -4,10 +4,15 @@ var rArm = document.getElementById("r_arm");
 var lLowerArm = document.getElementById("lower_arm");
 var lUpperArm = document.getElementById("upper_arm");
 
+var typeObj;
 var banner = document.getElementById('banner');
 var period = banner.getAttribute('data-period');
-var textToType = [ 'Press the buckle.', 'Hover over arms.', 'Hover over head.'];
+var textToType;
+var speed = 200;
+var instructions = [ 'Notice me, Senpai \\(^.^)>', 'Push the buckle.','Push it, Senpai (^,^\')>','Or', 'Hover over arms.', 'Hover over head.'];
+var puns = [ 'Not your usual Android.', 'HA HA HA !!', 'It\'s','Super Android !!', 'I like to move it, move it.'];
 
+textToType = instructions;
 head.style.animationFillMode="forwards";
 
 var isPlayingAnimation = false;
@@ -28,7 +33,10 @@ buckle.onclick = function() {
     lLowerArm.style.transformOrigin = "bottom center";
     lLowerArm.style.transform = "rotate(-50deg) translate(-5px, 20px)";
 
+    banner.style.animation = "blink .5s linear 0s infinite";
 
+    typeObj.toRotate = puns;
+    speed = 100;
     isPlayingAnimation = !isPlayingAnimation;
   }
   else {
@@ -43,6 +51,10 @@ buckle.onclick = function() {
     lLowerArm.style.transformOrigin = "50% 50%";
     lLowerArm.style.transform = "";
 
+    banner.style.animation = "";
+
+    typeObj.toRotate = instructions;
+    speed = 200;
     isPlayingAnimation = !isPlayingAnimation;
   }
 }
@@ -73,7 +85,7 @@ TypeText.prototype.tick = function () {
   this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
   var that = this;
-  var delta = 200 - Math.random() * 100;
+  var delta = speed - Math.random() * 100;
 
   if(this.isDeleting) { delta /= 2; }
 
@@ -95,7 +107,7 @@ TypeText.prototype.tick = function () {
 window.onload = function() {
   if(textToType)
   {
-    new TypeText(banner, textToType, period);
+    typeObj = new TypeText(banner, textToType, period);
   }
 
   var css = document.createElement("style");

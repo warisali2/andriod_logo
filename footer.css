@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+#footer {
+  font-family: 'Raleway', sans-serif;
+
+  margin: 0 auto;
+
+  background-color: #fff;
+  width: 400px;
+  height: 50px;
+  display: block;
+}
+
+#footer > * {
+  font-family: inherit;
+  background-color: inherit;
+}
+
+#madeBy {
+  display: inline;
+
+  line-height: 50px;
+  float: left;
+  font-size: 18px;
+  position: relative;
+
+  vertical-align: text-bottom;
+}
+
+#icons {
+  display: inline;
+  float: right;
+  position: relative;
+}
+
+#icons i {
+	display: block;
+	font-size: 24px;
+	line-height: 50px; width: 50px;
+	text-align: center;
+}
+#icons a {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	margin: 1px;
+	border-radius: 12px;
+	position: relative;
+}
+
+#icons a:before, #icons a:after {
+	content: '';
+	position: absolute; left: 0; top: 0;
+	width: 100%; height: 100%;
+	background: inherit;
+	border-radius: 100%;
+	transform: scaleX(2) scaleY(1.05);
+	clip: rect(0, 33px, 50px, 17px);
+	z-index: -1;
+}
+
+#icons a:after {
+	transform: scaleY(2) scaleX(1.05) rotate(90deg);
+}
+
+.tw {background: #00ACF0;}
+.fb {background: #3B5997;}
+.li {background: #007DB8;}
+.gh {background: #333;}

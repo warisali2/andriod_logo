@@ -16,9 +16,18 @@
 
   border: 6px solid #2980B9;
 
-
   padding: 0 20px;
   margin: 20px auto;
 
   display: block;
+}
+
+@keyframes blink {
+  0% {
+    border-color: #2980B9;
+  }
+
+  100% {
+    border-color: #E74C3C;
+  }
 }
